@@ -35,12 +35,7 @@ def read_in_A_matrix(file, number_students):
         second =( int(((lines[i]).split(' '))[1]) -1 )
         student_edges_list[first][second] = 1
 
-    # create and return a list of student objects with the A matrix data
-
-    for i in range(len(student_edges_list)):
-        list_of_students.append(Student(student_edges_list[i], []))
-
-    return list_of_students
+    return student_edges_list
 
 
 def read_in_local_info(filename, number_students):
@@ -50,13 +45,18 @@ def read_in_local_info(filename, number_students):
     print ("lines: ", lines)
 
 def create_student(edges, attributes):
-    pass
+    return Student(edges, attributes)
 
 def main():
     # test on caltech data
-    students = (read_in_A_matrix("Caltech_A.txt", 770))
+    A = (read_in_A_matrix("Caltech_A.txt", 770))
+    local = []
+    students = []
 
     # print the number of friends each student has
+    for i in range(770):
+        students.append(create_student(A[i], local))
+
     for student in students:
         print (student.number_friends)
 
