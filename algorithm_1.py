@@ -7,7 +7,7 @@ year, and high school. Missing data is coded 0.'''
 '''Question: Do we know how many edges each person has?'''
 
 #constants
-FILE_NAME = 'Amherst75'
+FILE_NAME = 'caltech.txt'
 
 #read text file
 def prepare_text(filename_data):
