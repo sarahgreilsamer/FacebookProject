@@ -8,7 +8,7 @@ class Student(object):
         # find out how many friends the student has
         count = 0
         for possible_edge in self.edge_array:
-            if self.edge_array[possible_edge] == 1:
+            if possible_edge == 1:
                 count = count + 1
         self.number_friends = count
 
@@ -22,6 +22,7 @@ def read_in_A_matrix(file, number_students):
     text_file = open(file, "r")
     lines = text_file.read().split('\n')
     student_edges_list = []
+    list_of_students = []
 
     # initialize each student's list of friends to all zeroes
     for i in range (number_students):
@@ -34,13 +35,13 @@ def read_in_A_matrix(file, number_students):
         second =( int(((lines[i]).split(' '))[1]) -1 )
         student_edges_list[first][second] = 1
 
-    #test
-    #print the first student's array of friend links
-    print (student_edges_list[0])
-    #first student is friends with the fifth student
-    print(student_edges_list[0][4])
-    #therefore fifth student is friends with the first student
-    print(student_edges_list[4][0])
+    # create and return a list of student objects with the A matrix data
+
+    for i in range(len(student_edges_list)):
+        list_of_students.append(Student(student_edges_list[i], []))
+
+    return list_of_students
+
 
 def read_in_local_info(filename, number_students):
     # read in the local info matrix as a list
@@ -53,8 +54,13 @@ def create_student(edges, attributes):
 
 def main():
     # test on caltech data
-    read_in_A_matrix("caltech.txt", 770)
-    read_in_local_info("", 770)
+    students = (read_in_A_matrix("Caltech_A.txt", 770))
+
+    # print the number of friends each student has
+    for student in students:
+        print (student.number_friends)
+
+
 
 if __name__ == "__main__":
     main()
