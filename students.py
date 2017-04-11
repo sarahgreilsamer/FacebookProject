@@ -1,3 +1,4 @@
+filename_data = "Caltech_A.txt"
 
 # a student object has a list of friend connections, a list of attributes,
 # and a number of friends variable
@@ -47,20 +48,32 @@ def read_in_local_info(filename, number_students):
 def create_student(edges, attributes):
     return Student(edges, attributes)
 
+def prepare_text(filename_data):
+    with open(filename_data) as file:
+        text = file.read()
+    return text
+
+def create_local(text):
+    local = [] #list of all students where each student is a list
+    lines = text.splitlines() #should return a list of strings
+    for each_line in lines: #for each string in the list of strings append that string
+        local.append(each_line.split()) #list of student is a list of lists of strings
+    return local
+
 def main():
     # test on caltech data
-    A = (read_in_A_matrix("Caltech_A.txt", 770))
-    local = []
+    A = (read_in_A_matrix(filename_data, 770))
+    local = create_local(prepare_text(filename_data))
     students = []
 
     # print the number of friends each student has
     for i in range(770):
-        students.append(create_student(A[i], local))
+        students.append(create_student(A[i], local[i]))
 
     for student in students:
         print (student.number_friends)
 
-
+    print(students)
 
 if __name__ == "__main__":
     main()
