@@ -10,15 +10,17 @@ class Student(object):
 def create_student(attributes):
     return Student(attributes)
 
-# returns a list of all edges in the school in the form (A,B) where A and B are friends
+# returns a list of all edges in the school in the form [A,B] where A and B are friends
 def create_friendships_list(file):
     text_file = open(file, "r")
     friendships = text_file.read().split('\n')
     edges = []
 
     for friendship in friendships:
-        newstr = '(' + ((friendship).split(' '))[0] + ',' + (friendship.split(' '))[1] + ')'
-        edges.append(newstr)
+        pair = []
+        pair.append((friendship.split(' '))[0])
+        pair.append((friendship.split(' '))[1])
+        edges.append(pair)
 
     return edges
 
