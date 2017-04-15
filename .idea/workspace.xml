@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="072af98b-ed86-44a1-9d52-80b814aad3cf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Caltech_A.txt" afterPath="$PROJECT_DIR$/Caltech_A.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/students.py" afterPath="$PROJECT_DIR$/students.py" />
-    </list>
+    <list default="true" id="072af98b-ed86-44a1-9d52-80b814aad3cf" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +15,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Caltech_A.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Caltech_A.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="33311" column="16" lean-forward="false" selection-start-line="33311" selection-start-column="16" selection-end-line="33311" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="algorithm_1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithm_1.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -32,8 +38,8 @@
       <file leaf-file-name="Graph.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -44,8 +50,8 @@
       <file leaf-file-name="students.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/students.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+            <state relative-caret-position="270">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,10 +74,10 @@
       <list>
         <option value="$PROJECT_DIR$/algorithm_1.py" />
         <option value="$PROJECT_DIR$/ReadIn.py" />
-        <option value="$PROJECT_DIR$/Graph.py" />
         <option value="$PROJECT_DIR$/Caltech_local.csv" />
         <option value="$PROJECT_DIR$/Caltech_A.txt" />
         <option value="$PROJECT_DIR$/students.py" />
+        <option value="$PROJECT_DIR$/Graph.py" />
       </list>
     </option>
   </component>
@@ -473,14 +479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Caltech_A.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="33311" column="16" lean-forward="false" selection-start-line="33311" selection-start-column="16" selection-end-line="33311" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/algorithm_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -489,26 +487,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/students.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Caltech_local.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11520">
+        <state relative-caret-position="444">
           <caret line="768" column="24" lean-forward="false" selection-start-line="768" selection-start-column="24" selection-end-line="768" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/students.py">
+    <entry file="file://$PROJECT_DIR$/Caltech_A.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+        <state relative-caret-position="384">
+          <caret line="33311" column="16" lean-forward="false" selection-start-line="33311" selection-start-column="16" selection-end-line="33311" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
