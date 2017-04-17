@@ -1,6 +1,7 @@
 import students
 import networkx as nx
 import random
+import sys
 
 def initialize_graph(local, A_matrix):
     # a list of Student objects, where each Student object has a list of attribute data called info
@@ -48,11 +49,31 @@ def share_post(G, n, P, seen_so_far):
             seen_so_far = share_post(G, list_of_friends[r], P, seen_so_far)
 
     # return the number of people that have seen the post
+    print (".")
     return seen_so_far
 
+def clear_attributes(G):
+    for node in G.nodes():
+        G.node[node]['hasSeen'] = False
+        G.node[node]['hasShared'] = False
+
+# runs the share_post method on every node in the graph and returns the node that reaches the most people
+def find_influencer(G):
+    greatest = 0
+    influencer = -1
+    for node in G.nodes():
+        influence = share_post(G, node, .10, 0)
+        if influence > greatest:
+            greatest = influence
+            influencer = node
+        clear_attributes(G)
+    return influencer
+
 def main():
-    g = initialize_graph("Caltech_local.csv", "Caltech_A.txt")
-    print(share_post(g, 1, .10, 0))
+    sys.setrecursionlimit(1500)
+    g = initialize_graph("Amherst_local.csv", "Amherst_A.txt")
+    #print(share_post(g, 31, .08, 0))
+    print (find_influencer(g))
 
 if __name__ == "__main__":
     main()
