@@ -1,11 +1,11 @@
 import csv
 FILE = "Caltech_A.txt"
 
-# a student object has a list of friend connections, a list of attributes,
-# and a number of friends variable
+# a student object has a list of attributes
 class Student(object):
     def __init__(self, local_info):
         self.info = local_info
+        self.hasSharedPost = False
 
 def create_student(attributes):
     return Student(attributes)
