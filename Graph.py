@@ -2,23 +2,23 @@ import students
 import networkx as nx
 import random
 
-def initialize_graph():
-    # a list of Student objects from the Caltech data, where each Student object has a list of attribute data called info
-    caltech_students = students.initialize_student_list("Caltech_local.csv")
+def initialize_graph(local, A_matrix):
+    # a list of Student objects, where each Student object has a list of attribute data called info
+    student_info_list = students.initialize_student_list(local)
 
-    # a list of all friendship connections in Caltech in the form [A, B], where A and B are friends
-    caltech_friendships = students.create_friendships_list("Caltech_A.txt")
+    # a list of all friendship connections in the school in the form [A, B], where A and B are friends
+    friendships = students.create_friendships_list(A_matrix)
 
     G = nx.Graph()
 
-    for friendship in caltech_friendships:
+    for friendship in friendships:
         G.add_node(int(friendship[0]), hasShared = False, hasSeen = False)
         G.add_node(int(friendship[1]), hasShared = False, hasSeen = False)
         G.add_edge(int(friendship[0]), int(friendship[1]))
 
     return G
 
-def post_share(G, n, P, seen_so_far):
+def share_post(G, n, P, seen_so_far):
     # give a post to the node
     # P is the likelihood that any given person will share the post
     # if a node "sees" a post, that is, one of their friends has shared the post,
@@ -45,17 +45,14 @@ def post_share(G, n, P, seen_so_far):
         # only share if the friend has not already shared the post before
         if not G.node[list_of_friends[r]]['hasShared']:
             G.node[list_of_friends[r]]['hasShared'] = False
-            seen_so_far = post_share(G, list_of_friends[r], P, seen_so_far)
+            seen_so_far = share_post(G, list_of_friends[r], P, seen_so_far)
 
     # return the number of people that have seen the post
     return seen_so_far
 
-def share_post(node, P):
-    pass
-
 def main():
-    g = initialize_graph()
-    print(post_share(g, 1, .10, 0))
+    g = initialize_graph("Caltech_local.csv", "Caltech_A.txt")
+    print(share_post(g, 1, .10, 0))
 
 if __name__ == "__main__":
     main()
