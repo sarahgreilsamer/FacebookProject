@@ -1,3 +1,5 @@
+#this is a test
+
 '''Info on data
 Each of the school .mat files has an A matrix (sparse) and a
 "local_info" variable, one row per node: a student/faculty status
